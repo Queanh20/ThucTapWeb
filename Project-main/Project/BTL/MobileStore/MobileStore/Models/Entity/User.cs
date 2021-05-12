@@ -1,4 +1,4 @@
-namespace MobileStore.Models.Entity
+﻿namespace MobileStore.Models.Entity
 {
     using System;
     using System.Collections.Generic;
@@ -9,12 +9,14 @@ namespace MobileStore.Models.Entity
     [Table("User")]
     public partial class User
     {
-        public int UserID { get; set; }
-
-        [StringLength(30)]
+        public long UserID { get; set; }
+        [StringLength(50)]
+        [Required(ErrorMessage = "chưa nhập username")]
         public string Username { get; set; }
 
-        [StringLength(50)]
+        [Required(ErrorMessage = "chưa nhập password")]
+        [StringLength(50, MinimumLength = 6)]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
         [StringLength(30)]

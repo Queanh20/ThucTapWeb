@@ -150,7 +150,9 @@
     <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\TermsController.cs" />
     <Compile Include="Controllers\TestimonialsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -165,6 +167,7 @@
     <Compile Include="Models\DAO\productType.cs" />
     <Compile Include="Models\DAO\CategoryDAO.cs" />
     <Compile Include="Models\DAO\productViewModel.cs" />
+    <Compile Include="Models\Entity\Customer.cs" />
     <Compile Include="Models\Entity\QL_Hang.cs" />
     <Compile Include="Models\Entity\orderViewProduct.cs" />
     <Compile Include="Models\DAO\TestimonialsDAO.cs" />
@@ -178,6 +181,7 @@
     <Compile Include="Models\Entity\Order.cs" />
     <Compile Include="Models\Entity\PaymentType.cs" />
     <Compile Include="Models\Entity\Product.cs" />
+    <Compile Include="Models\Entity\Register.cs" />
     <Compile Include="Models\Entity\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -5222,6 +5226,8 @@
     <Content Include="Views\Cart\RemovePayment.cshtml" />
     <Content Include="Views\AdminPage\_GetAllOrder.cshtml" />
     <Content Include="Views\AdminPage\GetAllOrder.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Register\Index.cshtml" />
     <None Include="Views\Shared\_MyLayout.cshtml" />
     <Content Include="Views\Testimonials\Testimonials.cshtml" />
     <Content Include="Views\Terms\Terms.cshtml" />

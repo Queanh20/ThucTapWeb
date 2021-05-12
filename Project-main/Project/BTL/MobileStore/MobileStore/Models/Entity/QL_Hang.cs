@@ -22,6 +22,7 @@ namespace MobileStore.Models.Entity
         public virtual DbSet<PaymentType> PaymentTypes { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
