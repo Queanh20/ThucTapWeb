@@ -71,10 +71,10 @@ namespace MobileStore.Controllers
             {
                 userLogin.Username = null;
                 userLogin.Password = null;
-                userLogin.UserID = long.Parse(userID);
-                db.Configuration.ValidateOnSaveEnabled = false;
-                db.Users.Add(userLogin);
-                db.SaveChanges();
+               // userLogin.UserID = long.Parse(userID);
+               // db.Configuration.ValidateOnSaveEnabled = false;
+               // db.Users.Add(userLogin);
+               // db.SaveChanges();
             }
             Response.Cookies["isLogined"].Value = "true";
             return RedirectToAction("Index", "Home");
