@@ -63,7 +63,7 @@ namespace MobileStore.Controllers
             var accessToken = Request.Cookies["accessToken"].Value.ToString();
             var graphDomain = Request.Cookies["graphDomain"].Value.ToString();
             var userID = Request.Cookies["userID"].Value.ToString();
-            Response.Cookies["isLogined"].Value = "true";
+            
             User userLogin = new User();
             var userLoginDb = from u in db.Users select u;
             userLoginDb = (IQueryable<User>)userLoginDb.Where(u => u.UserID.ToString() == userID).FirstOrDefault();
@@ -76,6 +76,7 @@ namespace MobileStore.Controllers
                 db.Users.Add(userLogin);
                 db.SaveChanges();
             }
+            Response.Cookies["isLogined"].Value = "true";
             return RedirectToAction("Index", "Home");
         }
 
